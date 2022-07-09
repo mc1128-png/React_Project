@@ -1,0 +1,53 @@
+bug：
+
+1.数据库数据定义：DataTypes.TEXT不能做主键，顺便解决了logging = true带来的bug
+  username: {
+        type: DataTypes.STRING,
+        unique: "username", //
+        allowNull: false
+    },
+2.嵌套层级过多props丢失 不增强组件
+3.封装router页面不刷新 react版本不兼容
+4.点击跳转路由，url发生变化页面不变化，强制刷新
+3.注册不上去，react版本
+4.组件嵌套，都在生命周期里面获取数据，componentDidMount，内部的生命周期不会执行，所以第一次渲染内部组件无数据，将获取数据都放到父组件里面
+5.生命周期执行顺序(先执行内部的操作（render，didMount，actionReducer，全局didMount），在执行全局外部的同步user，导致没有数据),将获取currentUser函数放到userReducer里面，默认currentUser为获取currentUser函数
+6.组件嵌套componentDidMount内部的生命周期不执行，创建评论首次获取不到username，刷新一下才能好使(添加评论)
+
+难点：
+
+1.jwt token验证
+2.封装路由
+
+
+react 全家桶
+react redux (redux-thunk redux-saga react-redux) react-router creact-react-app
+
+后端: node expres   / sequelize (ORM) mysql
+     1 模块化开发 ...
+     2 数据库模型 初始化 ： model / 模型关系
+     3 分层架构 : app - router - middleware - controller - model - sequlize - mysql
+     4 接口 ： 登录 / 注册 token 鉴权 ； 密码存储
+              关注 / 文章 / 喜欢 / 标签 整合关联
+     5 业务 ： 全局查询 ;
+Restful API ： 接口文档 / postman
+
+前端：创建项目 ： create-react-app
+      架构 ： pages - component - store (reducers 模块化 ) - router  - request - utils
+      数据流： index.html - App - Page - componnent - react-redux (数据) - action - redux-thunk- request(业务模块拆分，apiClient请求工具封装，token) - api
+                                                                   action - store - reducer- state
+      难点： 1 redux + react-router : connect-react-router=>在redux使用路由
+            2 token  维护用户请求接口  （同步和获取到本地localstorage ）
+            3 登录状态 ： currentUser（同步和获取到本地localstorage ） ，同步到仓库
+            4 页面跳转 监听
+            5 数据缓存问题（因为公用仓库） 在卸载 清除缓存
+            6 路由守护 只有登录才能访问
+            7 性能优化 ： 懒加载的实现方案
+            8 memo / purecomponent / shouldcomponentdidmount 优化
+            9 业务: 文章数据 markdown 解析；评论 删除/ 文章 修改删除 条件 ；
+              分页 ； 封装：文章列表 ；标签 多标签提交 ，标签过滤 ; 喜欢
+引导 ： 1 T -a（技术）- sutdent  ; a ->b(项目)-项目详情
+       2 T -a (项目) - sutdent ； a->b - b-a
+
+
+
