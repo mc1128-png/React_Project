@@ -15,7 +15,6 @@ bug：
 6.组件嵌套componentDidMount内部的生命周期不执行，创建评论首次获取不到username，刷新一下才能好使(添加评论)
 
 难点：
-
 1.jwt token验证
 2.封装路由
 
