@@ -1,5 +1,4 @@
 bug：
-
 1.数据库数据定义：DataTypes.TEXT不能做主键，顺便解决了logging = true带来的bug
   username: {
         type: DataTypes.STRING,
@@ -17,36 +16,34 @@ bug：
 难点：
 1.jwt token验证
 2.封装路由
+3.登录信息token存储
+4.项目架构
+5.静态服务
 
 
 react 全家桶
-react redux (redux-thunk redux-saga react-redux) react-router creact-react-app
+react redux (redux-thunk redux-saga react-redux) react-router creat-react-app(脚手架)
 
-后端: node expres   / sequelize (ORM) mysql
-     1 模块化开发 ...
-     2 数据库模型 初始化 ： model / 模型关系
+后端: node express / sequelize (ORM) mysql
+     1 模块化开发
+     2 数据库模型 初始化 ：model / 模型关系
      3 分层架构 : app - router - middleware - controller - model - sequlize - mysql
-     4 接口 ： 登录 / 注册 token 鉴权 ； 密码存储
-              关注 / 文章 / 喜欢 / 标签 整合关联
-     5 业务 ： 全局查询 ;
-Restful API ： 接口文档 / postman
+     4 接口 ：登录 / 注册 token 鉴权 ； 密码存储 ；关注 / 文章 / 喜欢 / 标签 整合关联
+     5 业务 ：全局查询
 
-前端：创建项目 ： create-react-app
+Restful API ：接口文档 / postman
+
+前端：创建项目 ：create-react-app
       架构 ： pages - component - store (reducers 模块化 ) - router  - request - utils
-      数据流： index.html - App - Page - componnent - react-redux (数据) - action - redux-thunk- request(业务模块拆分，apiClient请求工具封装，token) - api
-                                                                   action - store - reducer- state
+      数据流：index.html - App - Page - component - react-redux (数据) - action - redux-thunk-
+      request(业务模块拆分，apiClient请求工具封装，token) - api - action - store - reducer- state
       难点： 1 redux + react-router : connect-react-router=>在redux使用路由
-            2 token  维护用户请求接口  （同步和获取到本地localstorage ）
-            3 登录状态 ： currentUser（同步和获取到本地localstorage ） ，同步到仓库
-            4 页面跳转 监听
+            2 token 维护用户请求接口  （同步和获取到本地localstorage ）
+            3 登录状态 ：currentUser（同步和获取到本地localstorage ），同步到仓库
+            4 页面跳转监听
             5 数据缓存问题（因为公用仓库） 在卸载 清除缓存
             6 路由守护 只有登录才能访问
-            7 性能优化 ： 懒加载的实现方案
-            8 memo / purecomponent / shouldcomponentdidmount 优化
-            9 业务: 文章数据 markdown 解析；评论 删除/ 文章 修改删除 条件 ；
-              分页 ； 封装：文章列表 ；标签 多标签提交 ，标签过滤 ; 喜欢
-引导 ： 1 T -a（技术）- sutdent  ; a ->b(项目)-项目详情
-       2 T -a (项目) - sutdent ； a->b - b-a
-
-
-
+            7 性能优化 ：懒加载的实现方案
+            8 memo / pureComponent / shouldComponentDidMount 优化
+            9 业务: 文章数据 markdown 解析；评论 删除/文章 修改删除条件 分页
+            封装：文章列表 ；标签,多标签提交,标签过滤; 喜欢文章

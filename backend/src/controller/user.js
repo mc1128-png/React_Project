@@ -1,10 +1,9 @@
 // 用户控制器
-
 const User = require("../model/user")
 const {validateCreateUser, validateUserLogin} = require("../utils/validate/userValidate")
 const HttpException = require("../exception/http.exception")
 const {md5Password, matchPassword} = require("../utils/md5")
-const {sign} = require('../utils/jwt') //
+const {sign} = require('../utils/jwt')
 
 // 用户创建
 module.exports.createUser = async (req, res, next) => {
@@ -255,7 +254,6 @@ module.exports.updateUser = async (req, res, next) => {
         }
 
         // 3. 获取数据
-        console.log(req.body)
         const bodyUser = req.body.user
         if (!bodyUser) {
             throw new HttpException(422, "修改数据不存在", "data is unExisted")
@@ -305,7 +303,6 @@ module.exports.updateUser = async (req, res, next) => {
             .json({
                 data
             })
-
     } catch (error) { // error 是一个HttpException实例
         next(error)
     }

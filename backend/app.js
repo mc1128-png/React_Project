@@ -9,13 +9,6 @@ const initRoute = require('./src/init/initRoute')
 const noMatchMiddleWare = require('./src/middleware/noMatchMiddleWare')
 const errorMiddleWare = require('./src/middleware/errorMiddleWare')
 
-// let bodyParser = require("body-parser")
-// // parse application/x-www-form-urlencoded
-// app.use(bodyParser.urlencoded({extended: false}));
-//
-// // parse application/json
-// app.use(bodyParser.json());
-
 // 中间件 跨域
 app.use(cors())
 
