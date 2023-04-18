@@ -2,9 +2,13 @@
 React_Project
 
 add撤销更改
+撤回更改
 git reset --mixed
-git pull
+撤销代码
+git checkout .
 
+撤回更改并撤销代码
+git reset --hard
 
 
 
