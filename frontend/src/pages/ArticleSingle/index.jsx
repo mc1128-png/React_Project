@@ -1,9 +1,9 @@
 import {PureComponent} from 'react'
 import {connect} from 'react-redux';
-import * as action from '../../store/actions/article'
-import {getComments} from '../../store/actions/comments'
 import {Link} from "react-router-dom";
 import {marked} from "marked";
+import * as action from '../../store/actions/article'
+import {getComments} from '../../store/actions/comments'
 import CommentsContainer from "../Comments";
 import ArticleAction from "../ArticleAction";
 

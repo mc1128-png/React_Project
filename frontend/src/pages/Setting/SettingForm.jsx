@@ -26,7 +26,6 @@ class SettingForm extends PureComponent {
     // state 是在组件里
     onSubmitForm = (email, username, avatar, bio, password) => (e) => {
         e.preventDefault()
-        // 网络接口请求 ： 注册
         let user = {email, username, password, avatar, bio}
         if (!user.password) {
             delete user.password // 没修改 不要提交

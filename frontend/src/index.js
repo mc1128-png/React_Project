@@ -2,9 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {Route, Switch} from 'react-router-dom'
 import {Provider} from "react-redux";
-import App from './App';
 import {ConnectedRouter} from "connected-react-router";
 import {store, history} from "./store";
+import App from './App';
 
 // const root = ReactDOM.createRoot(document.getElementById('root'));
 // root.render(

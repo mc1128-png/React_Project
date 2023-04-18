@@ -31,7 +31,7 @@ class CommentsContainer extends PureComponent {
                     <p>
                         <Link to="/login">登录</Link>
                         &nbsp;or&nbsp;
-                        <Link to="register">注册</Link>
+                        <Link to="/register">注册</Link>
                     </p>
                     {/*评论列表*/}
                     <CommentList comments={this.props.comments}/>

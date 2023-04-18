@@ -12,30 +12,19 @@ class Register extends PureComponent {
     }
 
     changeUserEmail = e => {
-        // this.setState({
-        //     email: e.target.value
-        // })
-        // console.log("changeUserEmail")
         this.props.onEmailChange("email", e.target.value)
     }
 
     changeUserName = e => {
-        // this.setState({
-        //     username: e.target.value
-        // })
         this.props.onUsernameChange("username", e.target.value)
     }
 
     changePassword = e => {
-        // this.setState({
-        //     password: e.target.value
-        // })
         this.props.onPasswordChange("password", e.target.value)
     }
 
     submitForm = (email, username, password) => (e) => {
         e.preventDefault()
-        // 网络接口请求：注册
         this.props.onSubmit({email, username, password})
     }
 

@@ -1,10 +1,10 @@
 import {PureComponent} from "react";
 import {connect} from "react-redux";
 import *as action from '../../store/actions/user'
-import SettingForm from "./SettingForm";
 import Errors from "../../components/Errors";
 import {store} from "../../store";
 import {replace} from 'connected-react-router'
+import SettingForm from "./SettingForm";
 
 /*
 * 用户设置
@@ -54,6 +54,5 @@ const mapDispatch = dispatch => {
         onClickLogout: () => dispatch(action.logout()) // 退出
     }
 }
-
 
 export default connect(mapState, mapDispatch)(Setting)

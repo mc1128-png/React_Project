@@ -6,7 +6,6 @@ import {addFavorite, deleteFavorite} from "../../store/actions/favorite";
 import {Link} from "react-router-dom";
 import {marked} from "marked";
 import CommentsContainer from "../Comments";
-import ArticleAction from "../ArticleAction";
 
 /*
 * 1.文章slug

@@ -31,10 +31,8 @@ class ArticleNew extends PureComponent {
 
     removeTag = tag => () => this.props.removeTag(tag)
 
-    // state 是在组件里
     onSubmitForm = (article) => (e) => {
         e.preventDefault()
-        // 网络接口请求 ： 注册
         this.props.onSubmitArticle(article)
         // this.props.onUnload()
     }

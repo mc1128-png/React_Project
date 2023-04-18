@@ -2,8 +2,8 @@ import React, {Fragment, PureComponent, Suspense} from "react";
 import {Route, Switch} from "react-router-dom";
 import {connect} from "react-redux";
 import *as action from './store/actions/user'
-import Auth from "./Auth";
 import {getData} from "./utils/localStorage";
+import Auth from "./Auth";
 import Header from './components/Header'
 import Home from "./pages/Home";
 
@@ -18,7 +18,6 @@ const Profile = React.lazy(() => import('./pages/Profile'))
 const ArticleNew = React.lazy(() => import('./pages/ArticleNew'))
 const ArticleEdit = React.lazy(() => import('./pages/ArticelEdit'))
 const ArticleSingle = React.lazy(() => import('./pages/ArticleSingle'))
-
 
 class App extends PureComponent {
     componentDidMount() {
@@ -59,8 +58,9 @@ class App extends PureComponent {
 }
 
 const mapState = state => ({currentUser: state.user.currentUser})
-// 同步本地用户信息
+
 const mapDispatch = dispatch => ({
     syncUser: (user) => dispatch(action.userSyncResult(user))
 })
+
 export default connect(mapState, mapDispatch)(App);

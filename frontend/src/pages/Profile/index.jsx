@@ -1,8 +1,8 @@
 import React, {Component} from "react";
 // import ButtonInfo from "./ButtonInfo";
-import *as action from '../../store/actions/profile'
 import {connect} from "react-redux";
 import {Link} from "react-router-dom";
+import *as action from '../../store/actions/profile'
 import Articles from '../Article';
 import {getArticlesByAuthor, getArticlesByFavorite,} from "../../store/actions/articles";
 
