@@ -8,6 +8,7 @@ git pull
 commit 撤销更改
 撤销commit 
 git reset --soft 81bcecd5f8a58997772ee3441230a6baa1bede23
+撤销add
 git checkout .
 
 add commit 撤销更改
