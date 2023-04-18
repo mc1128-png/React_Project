@@ -20,3 +20,4 @@ git push -f
 git revert head
 :wq
 git push
+test revert
