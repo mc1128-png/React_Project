@@ -18,3 +18,4 @@ git reset --mixed 81bcecd5f8a58997772ee3441230a6baa1bede23
 
 push连同本地撤销更改
 git reset --hard 81bcecd5f8a58997772ee3441230a6baa1bede23
+git push -f
